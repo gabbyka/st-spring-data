@@ -34,10 +34,10 @@ public class DatabaseLoader implements CommandLineRunner {
         Hipster joe = joeHipsterOptional.orElseThrow(IllegalArgumentException::new);
         
         
-        cosplay.getHipsters().add(joe);
-        //joe.getHobbies().add(cosplay);
+        //cosplay.getHipsters().add(joe);
+        joe.getHobbies().add(cosplay);
         
-        hobbyRepository.save(cosplay);
+        //hobbyRepository.save(cosplay);
         hipsterRepository.save(joe);
     }
 

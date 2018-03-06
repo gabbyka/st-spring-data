@@ -2,8 +2,8 @@ package com.startrac.stspringdata.model;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,7 +22,7 @@ public class Hipster {
     String nickName;
     Integer age;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "hipster_hobby", joinColumns = @JoinColumn(name = "hipster_id"),
             inverseJoinColumns = @JoinColumn(name = "hobby_id"))
     private Set<Hobby> hobbies = new HashSet<>();
