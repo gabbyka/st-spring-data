@@ -1,6 +1,7 @@
 package com.startrac.stspringdata.loader;
 
 import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import com.startrac.stspringdata.model.Hipster;
@@ -22,6 +23,7 @@ public class DatabaseLoader implements CommandLineRunner {
 
 
     @Override
+    @Transactional
     public void run(String... args) throws Exception {
 
         Optional<Hobby> cosplayOptional = hobbyRepository.findByName("cosplaying");
