@@ -6,6 +6,12 @@
 </head>
 <body>
 	<h2>Hipsters</h2>
+	
+	<th:block th:each="hipster : ${hipsters}">
+		<div>
+			<h4 th:text="${hipster.name}">hipster name</h4>
+		</div>
+	</th:block>
 <!-- 	<table> -->
 <!-- 		<th:block th:each="recipe : ${recipes}"> -->
 <!-- 			<tr> -->
