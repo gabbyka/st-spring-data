@@ -3,9 +3,12 @@ package com.startrac.stspringdata.services;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import com.startrac.stspringdata.model.Hipster;
 import com.startrac.stspringdata.repositories.HipsterRepository;
 
+@Service
 public class HipsterServiceImpl implements HipsterService {
 
     private final HipsterRepository hipsterRepository;

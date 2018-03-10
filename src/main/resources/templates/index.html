@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="UTF-8">
-<title>Hipsters Home</title>
-</head>
-<body>
-	<h2>Hipsters</h2>
+	<head>
+		<meta charset="UTF-8">
+		<title>Hipsters Home</title>
+	</head>
+	<body>
+		<h2>Hipsters</h2>
 	
-	<th:block th:each="hipster : ${hipsters}">
-		<div>
-			<h4 th:text="${hipster.name}">hipster name</h4>
-		</div>
-	</th:block>
-<!-- 	<table> -->
-<!-- 		<th:block th:each="recipe : ${recipes}"> -->
-<!-- 			<tr> -->
-<!-- 				<td th:text="${recipe.description}">...</td> -->
-<!-- 				<td th:text="${recipe.cookTime}">...</td> -->
-<!-- 			</tr> -->
-<!-- 			<tr> -->
-<!-- 				<td colspan="2" th:text="${recipe.notes.recipeNotes}">...</td> -->
-<!-- 			</tr> -->
-<!-- 		</th:block> -->
-<!-- 	</table> -->
-</body>
+		<th:block th:each="hipster : ${hipsters}">
+			<div>
+				<h4 th:text="${hipster.name}">hipster name</h4>
+			</div>
+		</th:block>
+	</body>
 </html>
