@@ -22,6 +22,6 @@ public class HobbyRepositoryIT {
     @Test
     public void findByName() throws Exception {
         Optional<Hobby> current = hobbyRepository.findByName("travel");
-        assertEquals("travel", current.get().getName());
+        assertEquals("travel2", current.get().getName());
     }
 }
