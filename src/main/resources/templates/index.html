@@ -3,14 +3,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Hipsters Home</title>
+		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.min.css">
 	</head>
 	<body>
-		<h2>Hipsters</h2>
-	
-		<th:block th:each="hipster : ${hipsters}">
-			<div>
-				<h4 th:text="${hipster.name}">hipster name</h4>
-			</div>
-		</th:block>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.min.js"></script>
+		<div class="ui container">
+			<h2 class="ui header">Hipsters</h2>
+			<th:block th:each="hipster : ${hipsters}">
+				<div>
+					<h4 class="ui header" th:text="${hipster.name}">hipster name</h4>
+				</div>
+			</th:block>
+		</div>
 	</body>
 </html>
