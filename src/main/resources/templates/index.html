@@ -9,12 +9,23 @@
 	<body>
 		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.min.js"></script>
 		<div class="ui container">
-			<h2 class="ui header">Hipsters</h2>
-			<th:block th:each="hipster : ${hipsters}">
-				<div>
-					<h4 class="ui header" th:text="${hipster.name}">hipster name</h4>
-				</div>
-			</th:block>
+			<h1>Hipster Application</h1>
+			<h2 class="ui dividing header">Hipsters</h2>
+			<div class="ui stackable equal width grid">
+				<th:block th:each="hipster : ${hipsters}">
+					<div class="column">
+						<h4 class="ui header" th:text="${hipster.name}">hipster name</h4>
+					</div>
+					<div class="column">
+						<th:block th:each="hobby : ${hipster.hobbies}">
+							<div class="ui list">
+								<div class="item" th:text="${hobby.name}">hipster hobby</div>
+							</div>
+						</th:block>
+						<div style="clear: both; display: block;"></div>
+					</div>
+				</th:block>
+			</div>
 		</div>
 	</body>
 </html>
